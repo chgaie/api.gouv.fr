@@ -1,0 +1,80 @@
+@import '../../constants/colors.scss';
+
+#search-wrapper {
+  max-width: 950px;
+  width: 100%;
+
+  > label {
+    line-height: 18px;
+    font-weight: 600;
+    color: $darkestGrey;
+    font-size: 1rem;
+  }
+  > .search-bar {
+    font-size: 1.1rem;
+    background-color: #fff;
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    padding: 0;
+    transition: border-color 300ms ease-in-out;
+
+    &.focus {
+      border-color: $blue;
+    }
+
+    > input[type='text'] {
+      font-size: 1rem;
+      line-height: 38px;
+      padding: 0 10px;
+      margin: 0;
+      border: none;
+      background: none;
+      flex-grow: 1;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    > button {
+      border: none;
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      border: 4px solid #fff;
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+  .search-results-wrapper {
+    position: relative;
+
+    .search-results {
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px 0px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+
+      > div {
+        padding: 10px;
+        border: 2px solid $lightGrey;
+        border-top: none;
+
+        &:hover {
+          background-color: $lightestBlue;
+        }
+      }
+    }
+  }
+}
